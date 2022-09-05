@@ -1,0 +1,38 @@
+@import '../variables';
+
+.welcome{
+  margin: 4.25rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  gap: 1rem;
+}
+
+.search{
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  gap: .25rem;
+  .form-search{
+    display: flex;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    gap: 1rem;
+    background: $gray-500;
+    border-radius: 16px;
+    span{
+      color: $gray-400;
+    }
+    input{
+      background: transparent;
+      border: none;
+      outline: none;
+      color: $gray-600;
+      font-size: .75rem;
+    }
+  }
+  button{
+    border: none;
+    outline: none;
+    background: #F7F7FC;
+    border-radius: 10px;
+  }
+}
