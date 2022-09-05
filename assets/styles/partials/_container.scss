@@ -14,3 +14,26 @@ body, button{
   height: 100vh;
   margin: 0 auto;
 }
+
+a{
+  text-decoration: none;
+}
+
+.presentation{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img{
+    width: 30%;
+  }
+  a.intro{
+    background: $orange-300;
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    padding: .5rem 3rem 1rem 3rem;
+    color: #ffffff;
+    border-radius: 16px 0 16px 0;
+  }
+}
