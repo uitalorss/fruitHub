@@ -11,6 +11,11 @@
     font-weight: 300;
     color: $blue-500;
   }
+  .basket{
+    padding: .75rem;
+    border-radius: 100px;
+    box-shadow: 0 4px 4px #00000025;
+  }
 }
 
 .search{
@@ -116,6 +121,9 @@
     gap: 1rem;
     align-items: baseline;
     @include list-foods(1.25rem, .8125rem);
+    &.fit{
+      background: #F1EFF6;
+    }
   }
   @media only screen and(max-width: 340px){
     .foods{
