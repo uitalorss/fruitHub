@@ -86,9 +86,11 @@
       font-weight: 300;
       &.item{
         color: $blue-100;
+        opacity: .4;
       }
       &.special{
         color: $blue-500;
+        opacity: 1;
         &:after{
           @include detail-title(35px);
         }
@@ -100,6 +102,5 @@
     gap: 1rem;
     align-items: baseline;
     @include list-foods(1.25rem, .8125rem);
-
   }
 }

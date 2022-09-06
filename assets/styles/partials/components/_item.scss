@@ -38,6 +38,7 @@
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    color: $blue-500;
   }
   .order{
     display: flex;
@@ -45,6 +46,7 @@
     align-items: center;
     span{
       @include button-opacity-orange($orange-200, 1.5rem, .5rem);
+      color: $blue-500;
     }
     .amount{
       display: flex;
