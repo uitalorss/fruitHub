@@ -55,6 +55,19 @@
       border-radius: 10px;
       font-size: .875rem;
       color: $black-100;
+      &.fit{
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 530px) {
+  .food-types{
+    ul{
+      li.fit{
+          display: block;
+        }
     }
   }
 }
@@ -99,6 +112,7 @@
   }
   .foods{
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     align-items: baseline;
     @include list-foods(1.25rem, .8125rem);
