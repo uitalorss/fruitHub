@@ -117,4 +117,15 @@
     align-items: baseline;
     @include list-foods(1.25rem, .8125rem);
   }
+  @media only screen and(max-width: 340px){
+    .foods{
+      justify-content: center;
+    }
+  }
+
+  @media only screen and (min-width: 530px) {
+    .foods{
+      flex-wrap: nowrap;
+    }
+  }
 }
