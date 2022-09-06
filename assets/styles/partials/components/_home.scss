@@ -66,11 +66,14 @@
     margin-bottom: 1rem;
     color: $blue-500;
     font-weight: 300;
+    &:after{
+      @include detail-title(54px);
+    }
   }
   .combo-items{
     display: flex;
     gap: 1.5rem;
-    @include list-foods();
+    @include list-foods(1.25rem, .8125rem);
   }
 }
 
@@ -86,12 +89,17 @@
       }
       &.special{
         color: $blue-500;
+        &:after{
+          @include detail-title(35px);
+        }
       }
     }
   }
   .foods{
     display: flex;
-    gap: 1.5rem;
-    @include list-foods();
+    gap: 1rem;
+    align-items: baseline;
+    @include list-foods(1.25rem, .8125rem);
+
   }
 }
