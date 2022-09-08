@@ -21,11 +21,13 @@
     <div class="container">
       <span class="title">What is your firstname?</span>
       <div class="input">
-        <input type="text" placeholder="Chris" required>
+        <input id="name-user" type="text" placeholder="Chris" required>
       </div>
-      <a class="main-button" href="./home.html">Start Ordering</a>
+      <button id="start-order" class="main-button" onclick="saveNameAndRedirect()">Start Ordering</button>
     </div>
   </section>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
