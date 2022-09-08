@@ -32,6 +32,19 @@
   }
 }
 
+@media only screen and (max-width: 320px) {
+  .header-item{
+    .item-ilustration{
+      .back{
+        margin-bottom: 2rem;
+        a{
+          font-size: .75rem;
+        }
+      }
+    }
+  }
+}
+
 .info-amount{
   padding-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -106,6 +119,16 @@
     }
     a{
       @include main-button(.75rem 3.625rem)
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .add-to-cart{
+    .buttons{
+      a{
+        @include main-button(.75rem 2.5rem);
+      }
     }
   }
 }
