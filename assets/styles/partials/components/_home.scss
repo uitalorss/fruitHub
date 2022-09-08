@@ -17,6 +17,11 @@
     box-shadow: 0 4px 4px #00000025;
   }
 }
+@media only screen and (max-width: 320px) {
+  .welcome{
+    margin-bottom: 1.25rem;
+  }
+}
 
 .search{
   display: grid;
@@ -46,6 +51,16 @@
     outline: none;
     background: #F7F7FC;
     border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .search{
+    grid-template-columns: 5fr 1fr;
+    .form-search{
+      padding: 1.25rem 1rem;
+      gap: .5rem;
+    }
   }
 }
 
@@ -90,12 +105,56 @@
   }
   .combo-items{
     display: flex;
-    gap: 1.5rem;
-    @include list-foods(1.25rem, .8125rem);
+    justify-content: space-around;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 1rem 1.25rem 1rem;
+      gap: .8125rem;
+      .favorite{
+        font-size: 1rem;
+        align-self: flex-end;
+        margin-bottom: -1rem;
+        color: $orange-300;
+      }
+      span{
+        font-size: .75rem;
+        color: $blue-500;
+        font-weight: 500;
+      }
+      .add{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span{
+          color: $orange-500;
+          font-weight: 400;
+          @include button-opacity-orange(#FFF2E7, 1rem, .375rem);
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 480px) {
+    .combo-items{
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .combo-items{
+      .item{
+        padding: 1rem .5rem .75rem .5rem;
+        span{
+          text-align: center;
+        }
+      }
+    }
   }
 }
 
-.other-foods{
+.title-other-foods{
   ul{
     display: flex;
     gap: 1.5rem;
@@ -115,25 +174,90 @@
       }
     }
   }
+}
   .foods{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    align-items: baseline;
-    @include list-foods(1.25rem, .8125rem);
-    &.fit{
-      background: #F1EFF6;
-    }
-  }
-  @media only screen and(max-width: 340px){
-    .foods{
-      justify-content: center;
+    a{
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem .5rem .75rem .5rem;
+        gap: .625rem;
+        height: 140px;
+        justify-content: flex-end;
+        position: relative;
+        .favorite{
+          font-size: 1rem;
+          align-self: flex-end;
+          margin-bottom: -1rem;
+          color: $orange-300;
+          position: absolute;
+          top: 10px;
+        }
+        span{
+          font-size: .75rem;
+          color: $blue-500;
+          font-weight: 500;
+        }
+        .add{
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span{
+            align-self: baseline;
+            color: $orange-500;
+            font-weight: 400;
+            @include button-opacity-orange(#FFE3C9, 1rem, .375rem);
+          }
+        }
+      }
+      &:first-child{
+        background: #FFFCF2;
+        border-radius: 10px;
+      }
+      &:nth-child(2){
+        background: #FEF4F4;
+        border-radius: 10px;
+      }
+      &:last-child{
+        background: #F1EFF6;
+        border-radius: 10px;
+      }
     }
   }
 
-  @media only screen and (min-width: 530px) {
-    .foods{
-      flex-wrap: nowrap;
+  @media only screen and (max-width: 320px) {
+    a{
+      .item{
+        span{
+          text-align: center;
+        }
+      }
     }
   }
-}
+ 
+
+  @media only screen and (min-width: 480px) {
+    .foods{
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  @media only screen and (min-width: 720px) {
+    .foods{
+      gap: 1.5rem;
+      a{
+        .item{
+          padding: 1.5rem 1.5rem .75rem 1.5rem;
+          .favorite{
+            top: 20px;
+          }
+        }
+      }
+    }
+  }
